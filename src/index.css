@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-slate-200 font-sans antialiased;
+  background-image: radial-gradient(
+      1200px 600px at 80% -10%,
+      rgba(139, 92, 246, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at -10% 10%,
+      rgba(59, 130, 246, 0.08),
+      transparent 60%
+    );
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth color transitions when theme toggles */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 250ms ease, border-color 250ms ease,
+    color 250ms ease, fill 250ms ease, stroke 250ms ease,
+    box-shadow 250ms ease !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@layer components {
+  .glass {
+    @apply bg-glass backdrop-blur-xl border border-white/5;
+  }
+  .card {
+    @apply bg-card border border-white/5 rounded-2xl shadow-card;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:border-accent/40 hover:shadow-glow;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-accent-gradient text-white shadow-glow hover:shadow-glow-purple hover:scale-[1.02];
+  }
+  .btn-ghost {
+    @apply btn bg-white/5 text-slate-200 hover:bg-white/10 border border-white/5;
+  }
+  .input {
+    @apply bg-white/5 border border-white/5 rounded-xl px-4 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/30 transition;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .skeleton {
+    @apply relative overflow-hidden bg-white/5 rounded-md;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-shimmer;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.06),
+      transparent
+    );
+  }
+}
+
+/* =============================================================
+   LIGHT THEME OVERRIDES
+   Triggered when <html> does NOT have the `dark` class.
+   Re-maps the small set of utilities the components use.
+   ============================================================= */
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html:not(.dark) body {
+  background-color: #f5f7fb;
+  color: #0f172a;
+  background-image: radial-gradient(
+      1200px 600px at 80% -10%,
+      rgba(139, 92, 246, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at -10% 10%,
+      rgba(59, 130, 246, 0.12),
+      transparent 60%
+    );
+}
+
+html:not(.dark) .bg-bg { background-color: #f5f7fb !important; }
+html:not(.dark) .bg-bg\/70 { background-color: rgba(245, 247, 251, 0.75) !important; }
+html:not(.dark) .bg-bg-soft\/80 { background-color: rgba(255, 255, 255, 0.85) !important; }
+html:not(.dark) .bg-bg-soft\/90 { background-color: rgba(255, 255, 255, 0.92) !important; }
+html:not(.dark) .bg-card { background-color: #ffffff !important; }
+
+/* Slate text remap (dark-mode greys -> light-mode greys) */
+html:not(.dark) .text-slate-200 { color: #0f172a; }
+html:not(.dark) .text-slate-300 { color: #1e293b; }
+html:not(.dark) .text-slate-400 { color: #475569; }
+html:not(.dark) .text-slate-500 { color: #64748b; }
+html:not(.dark) .text-white { color: #0f172a; }
+
+/* Borders/whites that were translucent on dark surfaces */
+html:not(.dark) .border-white\/5 { border-color: rgba(15, 23, 42, 0.08); }
+html:not(.dark) .border-white\/10 { border-color: rgba(15, 23, 42, 0.12); }
+html:not(.dark) .bg-white\/5 { background-color: rgba(15, 23, 42, 0.04); }
+html:not(.dark) .bg-white\/10 { background-color: rgba(15, 23, 42, 0.06); }
+html:not(.dark) .bg-white\/\[0\.03\] { background-color: rgba(15, 23, 42, 0.03); }
+html:not(.dark) .bg-white\/\[0\.06\] { background-color: rgba(15, 23, 42, 0.06); }
+html:not(.dark) .hover\:bg-white\/5:hover { background-color: rgba(15, 23, 42, 0.05); }
+html:not(.dark) .hover\:bg-white\/10:hover { background-color: rgba(15, 23, 42, 0.08); }
+
+/* Inputs / placeholders */
+html:not(.dark) .input { color: #0f172a; background-color: #ffffff; border-color: rgba(15,23,42,0.12); }
+html:not(.dark) .input::placeholder { color: #94a3b8; }
+
+/* Skeleton shimmer base */
+html:not(.dark) .skeleton { background-color: rgba(15, 23, 42, 0.06); }
+html:not(.dark) .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(15, 23, 42, 0.08),
+    transparent
+  );
+}
+
+/* Cards lighter shadow */
+html:not(.dark) .card { box-shadow: 0 4px 24px -10px rgba(15, 23, 42, 0.12); }
+
+/* Scrollbar in light mode */
+html:not(.dark) ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }

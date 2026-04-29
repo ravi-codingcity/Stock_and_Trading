@@ -80,21 +80,18 @@
 
 ## 🖼️ Preview
 
-> 📸 Drop your screenshots into a `screenshots/` folder and update the paths below.
-
 <div align="center">
 
-| Dashboard | Markets |
-|-----------|---------|
-| ![Dashboard](./screenshots/dashboard.png) | ![Markets](./screenshots/markets.png) |
-
-| Portfolio | News |
-|-----------|------|
-| ![Portfolio](./screenshots/portfolio.png) | ![News](./screenshots/news.png) |
-
-| Login | Signup |
-|-------|--------|
-| ![Login](./screenshots/login.png) | ![Signup](./screenshots/signup.png) |
+<table>
+  <tr>
+    <td align="center"><img src="./src/Screenshots/Screenshort_1.JPG" alt="Apex Trade — Dashboard" width="100%" /><br/><sub><b>Dashboard · Market Overview</b></sub></td>
+    <td align="center"><img src="./src/Screenshots/Screenshort_2.JPG" alt="Apex Trade — Sectors & Insights" width="100%" /><br/><sub><b>Sectors · AI Insights · Activity</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./src/Screenshots/Screenshort_3.JPG" alt="Apex Trade — News & Markets" width="100%" /><br/><sub><b>Markets / News</b></sub></td>
+    <td align="center"><img src="./src/Screenshots/Screenshort_4.JPG" alt="Apex Trade — Auth Flow" width="100%" /><br/><sub><b>Auth · Login / Signup</b></sub></td>
+  </tr>
+</table>
 
 </div>
 
@@ -158,7 +155,7 @@ apex-trade/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/apex-trade.git
+git clone https://github.com/ravi-codingcity/apex-trade.git
 cd apex-trade
 
 # 2. Install dependencies
@@ -274,7 +271,7 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 
 ### ⭐ If you like this project, give it a star — it helps a lot!
 
-**Made with ❤️ and ☕ by [Your Name](https://github.com/your-username)**
+**Made with ❤️ and ☕ by [Ravi Chaudhary](https://github.com/ravi-codingcity)**
 
 <sub>📈 Happy Trading — *but remember, this is mock data!*</sub>
 

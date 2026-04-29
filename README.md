@@ -84,12 +84,12 @@
 
 <table>
   <tr>
-    <td align="center"><img src="./src/Screenshots/Screenshort_1.JPG" alt="Apex Trade — Dashboard" width="100%" /><br/><sub><b>Dashboard · Market Overview</b></sub></td>
-    <td align="center"><img src="./src/Screenshots/Screenshort_2.JPG" alt="Apex Trade — Sectors & Insights" width="100%" /><br/><sub><b>Sectors · AI Insights · Activity</b></sub></td>
+    <td align="center"><img src="./src/screenshots/Screenshort_1.JPG" alt="Apex Trade — Dashboard" width="100%" /><br/><sub><b>Dashboard · Market Overview</b></sub></td>
+    <td align="center"><img src="./src/screenshots/Screenshort_2.JPG" alt="Apex Trade — Sectors & Insights" width="100%" /><br/><sub><b>Sectors · AI Portfolio</b></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="./src/Screenshots/Screenshort_3.JPG" alt="Apex Trade — News & Markets" width="100%" /><br/><sub><b>Markets / News</b></sub></td>
-    <td align="center"><img src="./src/Screenshots/Screenshort_4.JPG" alt="Apex Trade — Auth Flow" width="100%" /><br/><sub><b>Auth · Login / Signup</b></sub></td>
+    <td align="center"><img src="./src/screenshots/Screenshort_3.JPG" alt="Apex Trade — News & Markets" width="100%" /><br/><sub><b>Markets / News</b></sub></td>
+    <td align="center"><img src="./src/screenshots/Screenshort_4.JPG" alt="Apex Trade — Auth Flow" width="100%" /><br/><sub><b>Auth · AI Insight</b></sub></td>
   </tr>
 </table>
 
